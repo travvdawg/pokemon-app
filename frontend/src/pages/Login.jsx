@@ -91,7 +91,9 @@ function Login() {
 						/>
 					</div>
 					<div className='form-group'>
-						<button className='btn btn-block'>Login</button>
+						<div className='deck-buttons'>
+							<button className='btn btn-block'>Login</button>
+						</div>
 					</div>
 				</form>
 			</section>
