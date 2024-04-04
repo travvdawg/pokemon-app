@@ -17,27 +17,31 @@ function Header() {
 	return (
 		<header className='header'>
 			<div className='logo'>
-				<Link to='/'>TCG Deck Builder</Link>
+				<Link
+					to='/'
+					className='logo'>
+					TCG Deck Builder
+				</Link>
 			</div>
-			<ul>
+			<ul className='header-links'>
 				{user ? (
 					<li>
 						<button
-							className='btn'
+							className='logout-btn'
 							onClick={onLogout}>
 							<FaSignOutAlt /> Logout
 						</button>
 					</li>
 				) : (
 					<>
-						<li>
+						<li className='link-item'>
 							<Link to='/login'>
-								<FaSignInAlt /> Login
+								<FaSignInAlt /> <p>Login</p>
 							</Link>
 						</li>
-						<li>
+						<li className='link-item'>
 							<Link to='/register'>
-								<FaUser /> Register
+								<FaUser /> <p>Register</p>
 							</Link>
 						</li>
 					</>
