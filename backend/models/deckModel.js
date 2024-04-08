@@ -12,11 +12,13 @@ const deckSchema = mongoose.Schema(
 			required: [true, 'Please add a name'],
 			trim: true,
 		},
-		cards: {
-			type: mongoose.Schema.Types.ObjectId,
-			required: [true, 'Decks need to have 60 cards'],
-			ref: 'Card',
-		},
+		cards: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				required: [true, 'Decks need to have 60 cards'],
+				ref: 'Card',
+			},
+		],
 		isPublic: {
 			type: Boolean,
 			default: false,
