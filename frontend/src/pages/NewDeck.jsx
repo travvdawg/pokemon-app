@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import CardList from '../components/CardList';
 
 function NewDeck() {
 	const { user } = useSelector((state) => state.auth);
@@ -12,7 +13,7 @@ function NewDeck() {
 		<>
 			<section className='heading'>
 				<h1>Create New Deck</h1>
-				<p>Please add cards to the deck</p>
+				<CardList />
 			</section>
 			<section className='deck-cards'>
 				<h1>Current Deck</h1>
